@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me — Apsara Sitaula | Web & Graphic Designer</title>
+  <meta name="description" content="Learn more about Apsara Sitaula — my creative approach, tools, story, and passions bridging web design and visual arts." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-192.png" />
+
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apsara Sitaula Homepage">
+        <img src="assets/logo.png" alt="Apsara Sitaula Logo" class="brand-logo-img" />
+        <span class="brand-name">APSARA SITAULA</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="resume.html" class="btn-resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            <path d="M14 2v6h6" />
+          </svg>
+          <span>View Resume</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link active">About</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="experience.html" class="nav-link">Experience</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- ==================== ABOUT HERO ==================== -->
+    <section class="about-hero-section">
+      <div class="container">
+        <div class="about-hero-grid">
+          <!-- Left: Portrait Stage with Sticky Note -->
+          <div class="hero-portrait-stage" style="min-height: 480px;">
+            <div class="brush-backdrop">
+              <img src="assets/elements/brush-backdrop.svg" alt="Organic brush texture" class="brush-svg" />
+            </div>
+
+            <div class="portrait-photo-wrap">
+              <img src="assets/profile-red-shawl.png" alt="Apsara Sitaula - About Me" />
+            </div>
+
+            <!-- Sticky Note & Hand-drawn text -->
+            <div class="sticky-note tilt-left" style="bottom: 20px; left: 10px;">
+              Same Girl<br />Bigger Dreams <span class="heart">♡</span>
+            </div>
+
+            <div class="floating-annotation" style="top: 15px; left: 0;">
+              <div class="handwritten">
+                Get to<br />Know Me <span class="heart">♡</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Hero Copy & Stats -->
+          <div class="about-hero-copy">
+            <div class="eyebrow-tag">ABOUT ME</div>
+            
+            <h1 class="serif-title" style="font-size: clamp(2.8rem, 4.8vw, 4.4rem); margin-bottom: 20px;">
+              More Than<br /><span class="highlight-rose">A Designer</span>
+            </h1>
+
+            <p style="font-size: 1.08rem; line-height: 1.75; color: var(--text-body); max-width: 520px; margin-bottom: 24px;">
+              I'm Apsara Sitaula, a web designer and graphic designer who enjoys turning ideas into visually engaging digital experiences. I love combining creativity with technology to make things that people remember.
+            </p>
+
+            <div class="stats-row">
+              <div class="stat-item">
+                <div class="stat-num">20+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">2+</div>
+                <div class="stat-label">Years Learning</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Passion</div>
+              </div>
+            </div>
+
+            <!-- Floating Handwritten Annotation -->
+            <div class="handwritten" style="margin-top: 24px; font-size: 1.3rem; color: var(--text-muted);">
+              Design • Build • Create • Repeat <span class="heart">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MY STORY SECTION ==================== -->
+    <section class="story-section">
+      <div class="container">
+        <div class="story-grid">
+          <!-- Col 1: Story Narrative -->
+          <div class="story-narrative">
+            <div class="eyebrow-tag">MY STORY</div>
+            <h2 class="serif-title" style="font-size: 2.5rem; margin-bottom: 20px;">
+              A Little<br /><span class="highlight-rose">About Me</span>
+            </h2>
+
+            <p>
+              I've always been drawn to creative things — from visual designs and posters to websites and digital experiences. What started as a curiosity slowly turned into a passion for designing and building meaningful digital experiences.
+            </p>
+            <p>
+              I love how design can turn simple ideas into something beautiful, and how websites can bring those ideas to life and reach real people. I'm currently learning, creating, and trying to be a little better than yesterday.
+            </p>
+
+            <div class="handwritten" style="margin-top: 18px; font-size: 1.35rem;">
+              Still Learning<br />Always Creating <span class="heart">♡</span>
+            </div>
+          </div>
+
+          <!-- Col 2: Arch Photo Preview -->
+          <div class="story-arch-wrap">
+            <div class="story-arch-img">
+              <img src="assets/profile.png" alt="Apsara Sitaula portrait" />
+              <div class="peek-world-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+                <span>A Peek Into My World</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Col 3: 4 Trait Highlights -->
+          <div class="story-traits">
+            <div class="trait-card">
+              <div class="trait-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-7 7c0 2.5 1.5 4.5 3 6v1h8v-1c1.5-1.5 3-3.5 3-6a7 7 0 0 0-7-7z" />
+                </svg>
+              </div>
+              <div class="trait-text">
+                <h5>Creative Mind</h5>
+                <p>I see possibilities in simple ideas.</p>
+              </div>
+            </div>
+
+            <div class="trait-card">
+              <div class="trait-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </div>
+              <div class="trait-text">
+                <h5>Detail Oriented</h5>
+                <p>I care about the little things.</p>
+              </div>
+            </div>
+
+            <div class="trait-card">
+              <div class="trait-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <div class="trait-text">
+                <h5>Always Learning</h5>
+                <p>Exploring new tools and ideas.</p>
+              </div>
+            </div>
+
+            <div class="trait-card">
+              <div class="trait-icon-circle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10" />
+                  <circle cx="12" cy="12" r="6" />
+                  <circle cx="12" cy="12" r="2" />
+                </svg>
+              </div>
+              <div class="trait-text">
+                <h5>Goal Driven</h5>
+                <p>Turning ideas into real results.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TWO WORLDS ONE PASSION ==================== -->
+    <section class="two-worlds-section">
+      <div class="container">
+        <div class="two-worlds-grid">
+          <!-- Col 1: Overview Text -->
+          <div>
+            <div class="eyebrow-tag">TWO WORLDS</div>
+            <h2 class="serif-title" style="font-size: 2.6rem; margin-bottom: 16px;">
+              <span class="highlight-rose">ONE</span> PASSION
+            </h2>
+            <p style="color: var(--text-body); font-size: 0.98rem; line-height: 1.7; margin-bottom: 20px;">
+              I work at the intersection of design and technology — creating visual experiences and bringing them to life on the web.
+            </p>
+            <div class="handwritten" style="font-size: 1.3rem;">
+              Different Mediums<br />Same Creativity <span class="heart">♡</span>
+            </div>
+          </div>
+
+          <!-- Col 2: Web Design Card -->
+          <div class="discipline-card">
+            <div class="discipline-header">
+              <div class="discipline-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h4>Web Design & Development</h4>
+            </div>
+            <p>
+              Modern, responsive websites, interactive experiences and games that look amazing and work perfectly.
+            </p>
+            <div class="discipline-preview-frame">
+              <img src="assets/projects/pokhara-thakali-kitchen.jpg" alt="Web Design Preview" loading="lazy" />
+            </div>
+            <a href="projects.html" class="btn btn-secondary" style="align-self: flex-start; padding: 10px 22px; font-size: 0.88rem;">
+              <span>View Web Projects →</span>
+            </a>
+          </div>
+
+          <!-- Col 3: Graphic Design Card -->
+          <div class="discipline-card">
+            <div class="discipline-header">
+              <div class="discipline-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 19l7-7 3 3-7 7-3-3z" />
+                  <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z" />
+                  <path d="M2 2l7.586 7.586" />
+                  <circle cx="11" cy="11" r="2" />
+                </svg>
+              </div>
+              <h4>Graphic Design</h4>
+            </div>
+            <p>
+              Posters, brand identity, social media graphics and visual designs that communicate and inspire.
+            </p>
+            <div class="discipline-preview-frame">
+              <img src="assets/projects/himalaya-branding.jpg" alt="Graphic Design Preview" loading="lazy" />
+            </div>
+            <a href="projects.html" class="btn btn-secondary" style="align-self: flex-start; padding: 10px 22px; font-size: 0.88rem;">
+              <span>View Design Projects →</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TOOLS & CREATIVE TOOLKIT ==================== -->
+    <section class="toolkit-section">
+      <div class="container">
+        <div class="toolkit-grid">
+          <!-- Intro -->
+          <div class="toolkit-col">
+            <div class="eyebrow-tag">TOOLS I WORK WITH</div>
+            <h3 class="serif-title" style="font-size: 2.2rem; margin-bottom: 12px;">
+              My Creative<br /><span class="highlight-rose">Toolkit</span>
+            </h3>
+            <p style="font-size: 0.92rem; color: var(--text-muted); line-height: 1.6;">
+              The tools and technologies that help me turn ideas into real digital experiences.
+            </p>
+          </div>
+
+          <!-- Web & Dev Tools -->
+          <div class="toolkit-col">
+            <h4>Web & Development</h4>
+            <div class="tool-badge-row">
+              <div class="tool-badge" title="HTML5"><span style="font-weight: 800; font-size: 0.85rem; color: #E34F26;">H5</span></div>
+              <div class="tool-badge" title="CSS3"><span style="font-weight: 800; font-size: 0.85rem; color: #1572B6;">CSS</span></div>
+              <div class="tool-badge" title="JavaScript"><span style="font-weight: 800; font-size: 0.85rem; color: #F7DF1E; background: #000; padding: 2px 4px; border-radius: 4px;">JS</span></div>
+              <div class="tool-badge" title="React"><span style="font-weight: 800; font-size: 0.85rem; color: #61DAFB;">⚛</span></div>
+              <div class="tool-badge" title="Next.js"><span style="font-weight: 800; font-size: 0.85rem; color: #000000;">N</span></div>
+              <div class="tool-badge" title="Tailwind CSS"><span style="font-weight: 800; font-size: 0.85rem; color: #06B6D4;">≈</span></div>
+              <div class="tool-badge" title="Git"><span style="font-weight: 800; font-size: 0.85rem; color: #F05032;">⌥</span></div>
+              <div class="tool-badge" title="GitHub"><span style="font-weight: 800; font-size: 0.85rem; color: #181717;">GH</span></div>
+            </div>
+          </div>
+
+          <!-- Design & Creative Tools -->
+          <div class="toolkit-col">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+              <h4 style="margin-bottom: 0;">Design & Creative</h4>
+              <span class="handwritten" style="font-size: 1.15rem; color: var(--text-muted);">Tools • Ideas ♡</span>
+            </div>
+            <div class="tool-badge-row">
+              <div class="tool-badge" title="Figma"><span style="font-weight: 800; font-size: 0.85rem; color: #F24E1E;">Fig</span></div>
+              <div class="tool-badge" title="Photoshop"><span style="font-weight: 800; font-size: 0.85rem; color: #31A8FF; background: #001E36; padding: 2px 4px; border-radius: 4px;">Ps</span></div>
+              <div class="tool-badge" title="Illustrator"><span style="font-weight: 800; font-size: 0.85rem; color: #FF9A00; background: #330000; padding: 2px 4px; border-radius: 4px;">Ai</span></div>
+              <div class="tool-badge" title="Canva"><span style="font-weight: 800; font-size: 0.85rem; color: #00C4CC;">Can</span></div>
+              <div class="tool-badge" title="CapCut"><span style="font-weight: 800; font-size: 0.85rem; color: #000000;">⧉</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BEYOND THE SCREEN ==================== -->
+    <section class="beyond-section">
+      <div class="container">
+        <div class="beyond-section-header">
+          <div class="eyebrow-tag">BEYOND THE SCREEN</div>
+          <h2 class="serif-title" style="font-size: 2.8rem;">
+            A Few Things <span class="highlight-rose">I Love</span>
+          </h2>
+          <div class="handwritten" style="font-size: 1.35rem; margin-top: 6px;">
+            Same Girl Different Stories <span class="heart">♡</span>
+          </div>
+        </div>
+
+        <div class="interest-pills-row">
+          <div class="interest-item">
+            <div class="interest-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="6" width="20" height="12" rx="2" />
+                <path d="M6 12h4m-2-2v4" />
+                <circle cx="17" cy="10" r="1" fill="currentColor" />
+                <circle cx="15" cy="13" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <span>Games</span>
+          </div>
+
+          <div class="interest-item">
+            <div class="interest-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+              </svg>
+            </div>
+            <span>Music</span>
+          </div>
+
+          <div class="interest-item">
+            <div class="interest-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+            </div>
+            <span>Photography</span>
+          </div>
+
+          <div class="interest-item">
+            <div class="interest-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+              </svg>
+            </div>
+            <span>Exploring</span>
+          </div>
+
+          <div class="interest-item">
+            <div class="interest-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+                <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+                <line x1="6" y1="1" x2="6" y2="4" />
+                <line x1="10" y1="1" x2="10" y2="4" />
+                <line x1="14" y1="1" x2="14" y2="4" />
+              </svg>
+            </div>
+            <span>Coffee</span>
+          </div>
+
+          <div class="interest-item">
+            <div class="interest-circle">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L15 8L22 9L17 14L18 21L12 17L6 21L7 14L2 9L9 8L12 2Z" />
+              </svg>
+            </div>
+            <span>Aesthetic Spaces</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOTTOM BANNER ==================== -->
+    <section class="bottom-cta-section">
+      <div class="container">
+        <div class="bottom-cta-banner">
+          <div class="bottom-cta-copy">
+            <div class="eyebrow-tag">LET'S CREATE TOGETHER</div>
+            <h3>Have an Idea?<br /><span class="highlight-rose">Let's Make It Real.</span></h3>
+            <p>
+              I'm always open to new opportunities, creative projects and collaborations. Let's create something amazing together.
+            </p>
+            <div class="bottom-cta-actions">
+              <a href="projects.html" class="btn btn-primary">
+                <span>View My Work</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <span>Let's Connect →</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bottom-cta-flatlay-wrap">
+            <img src="assets/elements/desk-flatlay.jpg" alt="Creative Desk Flatlay" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand">
+          <img src="assets/logo.png" alt="Apsara Sitaula Logo" class="brand-logo-img" />
+          <span class="brand-name">APSARA SITAULA</span>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-inspire">
+          Design Create Inspire <span class="heart" style="color: var(--primary);">♡</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Apsara Sitaula. All rights reserved.</div>
+        <div>Made with <span style="color: var(--primary);">♡</span> in Nepal</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

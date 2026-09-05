@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apsara Sitaula — Web Designer & Graphic Designer | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Apsara Sitaula — Web Designer and Graphic Designer creating beautiful websites, engaging games and memorable visual designs." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-192.png" />
+
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand" aria-label="Apsara Sitaula Homepage">
+        <img src="assets/logo.png" alt="Apsara Sitaula Logo" class="brand-logo-img" />
+        <span class="brand-name">APSARA SITAULA</span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Right Action Button & Mobile Toggle -->
+      <div class="header-actions">
+        <a href="resume.html" class="btn-resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            <path d="M14 2v6h6" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <line x1="10" y1="9" x2="8" y2="9" />
+          </svg>
+          <span>View Resume</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link active">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="projects.html" class="nav-link">Projects</a>
+    <a href="experience.html" class="nav-link">Experience</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-layout" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Content -->
+          <div class="hero-content">
+            <div class="eyebrow-tag">HELLO, I'M</div>
+            
+            <h1 class="hero-headline">
+              <span class="name-first">Apsara</span>
+              <span class="name-last">Sitaula</span>
+            </h1>
+
+            <p class="hero-role">WEB DESIGNER / GRAPHIC DESIGNER</p>
+
+            <p class="hero-desc">
+              I create beautiful websites, engaging games and visual designs that leave a lasting impression.
+            </p>
+
+            <div class="hero-buttons">
+              <a href="projects.html" class="btn btn-primary">
+                <span>View My Work</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+              <a href="contact.html" class="btn btn-secondary">
+                <span>Let's Connect</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Portrait Stage with Brush & Annotations -->
+          <div class="hero-portrait-stage">
+            <!-- Organic Painterly Pink Brush Texture -->
+            <div class="brush-backdrop">
+              <img src="assets/elements/brush-backdrop.svg" alt="Brush stroke texture" class="brush-svg" />
+            </div>
+
+            <!-- Real Profile Portrait Cutout -->
+            <div class="portrait-photo-wrap">
+              <img src="assets/profile-cutout.png" alt="Apsara Sitaula - Web Designer & Graphic Designer" />
+            </div>
+
+            <!-- Handwritten Floating Text -->
+            <div class="floating-annotation anno-inspire">
+              <div class="handwritten">
+                Create<br />
+                Design<br />
+                Inspire <span class="heart">♡</span>
+              </div>
+            </div>
+
+            <!-- Editorial Vertical Tag -->
+            <div class="hero-editorial-tag">
+              GOOD<br />IDEAS<br />BRIGHTER<br />PEOPLE
+              <div class="hero-editorial-line"></div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="side-scroll-tag">
+              04
+              <div style="width: 1px; height: 28px; background: rgba(194, 37, 92, 0.35);"></div>
+              <span>SCROLL ↓</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECTS PREVIEW ==================== -->
+    <section class="featured-preview-section">
+      <div class="container">
+        <div class="section-header-compact">
+          <div class="eyebrow-tag" style="margin-bottom: 0;">FEATURED PROJECTS</div>
+          <a href="projects.html" style="font-size: 0.88rem; font-weight: 600; color: var(--primary);">
+            Explore all works →
+          </a>
+        </div>
+
+        <div class="featured-grid-row">
+          <!-- Card 1: Pokhara Thakali Kitchen -->
+          <article class="preview-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://restuarant-pokhara-ka66.vercel.app/', '_blank', 'noopener,noreferrer')" title="Open Pokhara Thakali Kitchen live website">
+            <div class="preview-card-img">
+              <img src="assets/projects/pokhara-thakali-kitchen.jpg" alt="Pokhara Thakali Kitchen Website" loading="lazy" />
+            </div>
+            <div class="preview-card-body">
+              <div class="preview-card-info">
+                <h4>Pokhara Thakali Kitchen</h4>
+                <p>Web Design & Development</p>
+              </div>
+              <a href="https://restuarant-pokhara-ka66.vercel.app/" target="_blank" rel="noopener noreferrer" class="preview-card-arrow" aria-label="View Pokhara Thakali Kitchen live website">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Snake Game -->
+          <article class="preview-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://apsarasitaula9-dot.github.io/snake-game/', '_blank', 'noopener,noreferrer')" title="Open Snake Game live website">
+            <div class="preview-card-img">
+              <img src="assets/projects/snake-game.png" alt="Snake Game" loading="lazy" />
+            </div>
+            <div class="preview-card-body">
+              <div class="preview-card-info">
+                <h4>Snake Game</h4>
+                <p>Game Development</p>
+              </div>
+              <a href="https://apsarasitaula9-dot.github.io/snake-game/" target="_blank" rel="noopener noreferrer" class="preview-card-arrow" aria-label="View Snake Game live website">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Poster Design (Korean Ramen) -->
+          <article class="preview-card">
+            <div class="preview-card-img">
+              <img src="assets/projects/korean-ramen.jpg" alt="Korean Ramen Poster Design" loading="lazy" />
+            </div>
+            <div class="preview-card-body">
+              <div class="preview-card-info">
+                <h4>Poster Design</h4>
+                <p>Graphic Design</p>
+              </div>
+              <a href="#" class="preview-card-arrow" data-project-id="korean-ramen" aria-label="View Korean Ramen poster details">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4: View All Projects -->
+          <a href="projects.html" class="preview-card-all">
+            <div class="circle-plus-btn">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="12" y1="5" x2="12" y2="19" />
+                <line x1="5" y1="12" x2="19" y2="12" />
+              </svg>
+            </div>
+            <div>
+              <h4>View All Projects</h4>
+              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">Web • Games • Graphics</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand">
+          <img src="assets/logo.png" alt="Apsara Sitaula Logo" class="brand-logo-img" />
+          <span class="brand-name">APSARA SITAULA</span>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-inspire">
+          Design Create Inspire <span class="heart" style="color: var(--primary);">♡</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Apsara Sitaula. All rights reserved.</div>
+        <div>Made with <span style="color: var(--primary);">♡</span> in Nepal</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT DETAIL MODAL ==================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-media">
+        <img id="modalImage" src="" alt="Project Preview" />
+      </div>
+      <div class="modal-body">
+        <span class="project-category-badge" id="modalCategory">Category</span>
+        <h3 class="serif-title" id="modalTitle" style="font-size: 1.8rem; margin: 8px 0 14px;">Project Title</h3>
+        <p id="modalDesc" style="color: var(--text-body); line-height: 1.7; margin-bottom: 24px;">Project Description</p>
+        <div class="project-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

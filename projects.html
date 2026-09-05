@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Showcase — Apsara Sitaula | Portfolio</title>
+  <meta name="description" content="Explore featured projects by Apsara Sitaula including web development, 3D interactive games, brand identity, and poster graphics." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-192.png" />
+
+
+  <!-- Google Fonts: Playfair Display, Plus Jakarta Sans & Caveat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css?v=2.1" />
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Apsara Sitaula Homepage">
+        <img src="assets/logo.png" alt="Apsara Sitaula Logo" class="brand-logo-img" />
+        <span class="brand-name">APSARA SITAULA</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="experience.html" class="nav-link">Experience</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="resume.html" class="btn-resume">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+            <path d="M14 2v6h6" />
+          </svg>
+          <span>View Resume</span>
+        </a>
+
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="projects.html" class="nav-link active">Projects</a>
+    <a href="experience.html" class="nav-link">Experience</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- ==================== PROJECTS HERO ==================== -->
+    <section class="projects-hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Left Content & Filters -->
+          <div>
+            <div class="eyebrow-tag">MY WORK</div>
+            
+            <h1 class="serif-title" style="font-size: clamp(2.8rem, 5vw, 4.8rem); margin-bottom: 16px;">
+              Designing.<br /><span class="highlight-rose">Building.</span><br />Creating.
+            </h1>
+
+            <p style="font-size: 1.05rem; color: var(--text-body); max-width: 480px; line-height: 1.65;">
+              A collection of websites, interactive experiences, games and visual designs I've created.
+            </p>
+
+            <!-- Interactive Category Filter Bar -->
+            <div class="filter-bar">
+              <button class="filter-pill active" data-filter="all">
+                All Projects
+              </button>
+              <button class="filter-pill" data-filter="website">
+                💻 Websites
+              </button>
+              <button class="filter-pill" data-filter="game">
+                🎮 Games
+              </button>
+              <button class="filter-pill" data-filter="graphic-design">
+                🎨 Graphic Design
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Portrait Stage with Brush -->
+          <div class="hero-portrait-stage" style="min-height: 480px;">
+            <div class="brush-backdrop">
+              <img src="assets/elements/brush-backdrop.svg" alt="Brush texture" class="brush-svg" />
+            </div>
+
+            <div class="portrait-photo-wrap">
+              <img src="assets/profile-cutout.png" alt="Apsara Sitaula" />
+            </div>
+
+            <div class="floating-annotation" style="top: 15%; left: -10px;">
+              <div class="handwritten">
+                Ideas<br />into<br />Reality <span class="heart">♡</span>
+              </div>
+            </div>
+
+            <div class="sticky-note tilt-right" style="top: 20%; right: -20px; font-size: 1.15rem; max-width: 170px;">
+              Websites<br />Games<br />Posters<br />Branding<br />and more... <span class="heart">♡</span>
+            </div>
+
+            <div style="position: absolute; bottom: 20px; right: 0; text-align: right;">
+              <div style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--text-dark);">12+ Projects</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">And more to come...</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURED PROJECT SHOWCASE ==================== -->
+    <section class="featured-showcase-section">
+      <div class="container">
+        <div class="eyebrow-tag">FEATURED PROJECT</div>
+
+        <div class="showcase-card" id="featuredShowcaseCard" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://restuarant-pokhara-ka66.vercel.app/', '_blank', 'noopener,noreferrer')" title="Open Pokhara Thakali Kitchen live website">
+          <!-- Left: Realistic Laptop Frame -->
+          <div class="showcase-media">
+            <div class="laptop-frame">
+              <div class="laptop-screen">
+                <img id="featuredImage" src="assets/projects/pokhara-thakali-kitchen.jpg" alt="Pokhara Thakali Kitchen Website UI" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Details -->
+          <div class="showcase-content">
+            <span class="project-category-badge" id="featuredCategory">WEBSITE</span>
+            
+            <h3 id="featuredTitle">Pokhara Thakali Kitchen</h3>
+            <div class="showcase-subtitle" id="featuredSubtitle">Web Design & Development</div>
+
+            <p id="featuredDesc">
+              A modern and elegant website for a traditional Nepali restaurant, featuring menu, gallery, reservation system and a fully responsive design.
+            </p>
+
+            <a id="featuredLink" href="https://restuarant-pokhara-ka66.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="align-self: flex-start;">
+              <span>View Project</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </a>
+
+            <div class="project-tags" id="featuredTags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">TypeScript</span>
+            </div>
+
+            <div class="showcase-num" id="featuredNum">01</div>
+
+            <div class="handwritten" id="featuredNote" style="position: absolute; right: 30px; top: 30px; font-size: 1.25rem; transform: rotate(4deg);">
+              Good Food<br />Good Design <span class="heart">♡</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS MAIN GRID ==================== -->
+    <section class="projects-grid-section">
+      <div class="container">
+        <div class="projects-main-grid" id="portfolioGrid">
+          
+          <!-- Card 1: Snake Game -->
+          <article class="portfolio-card" data-category="game" data-project-id="snake-game">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/snake-game.png" alt="Snake Game Development" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">GAME</span>
+                <h4>Snake Game</h4>
+                <div class="card-sub">Game Development</div>
+                <p>
+                  A modern browser-based Snake Game with multiple difficulty levels, score progression, unlockable skins, sound controls, fullscreen mode, and responsive gameplay.
+                </p>
+              </div>
+
+              <div>
+                <a href="https://apsarasitaula9-dot.github.io/snake-game/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;">
+                  <span>View Project →</span>
+                </a>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+              </div>
+
+              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
+                Games That Play <span class="heart">♡</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Korean Ramen (Graphic Design) -->
+          <article class="portfolio-card" data-category="graphic-design" data-project-id="korean-ramen">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/korean-ramen.jpg" alt="Korean Ramen Graphic Poster" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">GRAPHIC DESIGN</span>
+                <h4>Korean Ramen</h4>
+                <div class="card-sub">Poster Design</div>
+                <p>
+                  A bold and appetizing poster design for Korean Ramen, created to capture flavor, energy and culture.
+                </p>
+              </div>
+
+              <div>
+                <a href="#" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;" data-project-id="korean-ramen">
+                  <span>View Project →</span>
+                </a>
+                <div class="project-tags">
+                  <span class="project-tag">Photoshop</span>
+                  <span class="project-tag">Illustrator</span>
+                </div>
+              </div>
+
+              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
+                Visuals That Speak <span class="heart">♡</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: Brand Identity (Graphic Design) -->
+          <article class="portfolio-card" data-category="graphic-design" data-project-id="himalaya-organic">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/himalaya-branding.jpg" alt="Himalaya Organic Brand Identity" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">GRAPHIC DESIGN</span>
+                <h4>Brand Identity</h4>
+                <div class="card-sub">Himalaya Organic</div>
+                <p>
+                  Complete brand identity design including logo, packaging, and visual assets for a natural skincare brand.
+                </p>
+              </div>
+
+              <div>
+                <a href="#" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;" data-project-id="himalaya-organic">
+                  <span>View Project →</span>
+                </a>
+                <div class="project-tags">
+                  <span class="project-tag">Illustrator</span>
+                  <span class="project-tag">Photoshop</span>
+                  <span class="project-tag">Branding</span>
+                </div>
+              </div>
+
+              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
+                Clean Simple Meaningful <span class="heart">♡</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: E-Library (Website) -->
+          <article class="portfolio-card" data-category="website" data-project-id="e-library">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/e-library.jpg" alt="E-Library Digital Library Project" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">WEBSITE</span>
+                <h4>E-Library</h4>
+                <div class="card-sub">Personal Project</div>
+                <p>
+                  A modern digital library website designed to provide students with easy access to books, categories, and learning resources.
+                </p>
+              </div>
+
+              <div>
+                <a href="https://e-library-dusky.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;">
+                  <span>View Project →</span>
+                </a>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
+              </div>
+
+              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
+                Read • Learn • Grow <span class="heart">♡</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: Social Media Graphics (Graphic Design) -->
+          <article class="portfolio-card" data-category="graphic-design" data-project-id="social-media">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/social-media.jpg" alt="Social Media Graphics Design" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">GRAPHIC DESIGN</span>
+                <h4>Social Media Graphics</h4>
+                <div class="card-sub">Various Projects</div>
+                <p>
+                  A collection of social media posts, banners and promotional designs for different brands and campaigns.
+                </p>
+              </div>
+
+              <div>
+                <a href="#" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;" data-project-id="social-media">
+                  <span>View Project →</span>
+                </a>
+                <div class="project-tags">
+                  <span class="project-tag">Canva</span>
+                  <span class="project-tag">Photoshop</span>
+                  <span class="project-tag">Social Media</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 6: Coming Soon... (Website) -->
+          <article class="portfolio-card" data-category="website" data-project-id="coming-soon">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/coming-soon.jpg" alt="Upcoming Projects" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">WEBSITE</span>
+                <h4>Coming Soon...</h4>
+                <div class="card-sub">More Exciting Projects</div>
+                <p>
+                  I'm always working on new ideas and creative projects. Stay tuned for more amazing work!
+                </p>
+              </div>
+
+              <div>
+                <a href="contact.html" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.85rem;">
+                  <span>Stay Updated →</span>
+                </a>
+              </div>
+
+              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
+                Bigger Ideas Coming <span class="heart">♡</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BOTTOM BANNER ==================== -->
+    <section class="bottom-cta-section">
+      <div class="container">
+        <div class="bottom-cta-banner">
+          <div class="bottom-cta-copy">
+            <div class="eyebrow-tag">LET'S WORK TOGETHER</div>
+            <h3>Have a Project in Mind?<br /><span class="highlight-rose">Let's Create Something Amazing.</span></h3>
+            <p>
+              I'm always open to new opportunities, creative projects and collaborations. Let's bring your ideas to life.
+            </p>
+          </div>
+
+          <div class="bottom-cta-actions">
+            <a href="contact.html" class="btn btn-primary">
+              <span>Let's Connect →</span>
+            </a>
+            <a href="resume.html" class="btn btn-secondary">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                <path d="M14 2v6h6" />
+              </svg>
+              <span>View Resume</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="brand">
+          <img src="assets/logo.png" alt="Apsara Sitaula Logo" class="brand-logo-img" />
+          <span class="brand-name">APSARA SITAULA</span>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="footer-inspire">
+          Design Create Inspire <span class="heart" style="color: var(--primary);">♡</span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Apsara Sitaula. All rights reserved.</div>
+        <div>Made with <span style="color: var(--primary);">♡</span> in Nepal</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== PROJECT DETAIL MODAL ==================== -->
+  <div class="modal-overlay" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-box">
+      <button class="modal-close-btn" id="modalClose" aria-label="Close modal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <div class="modal-media">
+        <img id="modalImage" src="" alt="Project Preview" />
+      </div>
+      <div class="modal-body">
+        <span class="project-category-badge" id="modalCategory">Category</span>
+        <h3 class="serif-title" id="modalTitle" style="font-size: 1.8rem; margin: 8px 0 14px;">Project Title</h3>
+        <p id="modalDesc" style="color: var(--text-body); line-height: 1.7; margin-bottom: 24px;">Project Description</p>
+        <div class="project-tags" id="modalTags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js?v=2.1"></script>
+</body>
+</html>

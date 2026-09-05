@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume — Apsara Sitaula | Web Designer & Graphic Designer</title>
+  <meta name="description" content="Official Resume of Apsara Sitaula — Web Designer & Graphic Designer located in Pokhara, Nepal." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/favicon-192.png" />
+
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --primary: #C2255C;
+      --text-dark: #181517;
+      --text-body: #4A4045;
+      --text-muted: #7A6D74;
+      --bg: #FFF7F8;
+      --card-bg: #FFFFFF;
+      --border: rgba(194, 37, 92, 0.15);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-body);
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .resume-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      box-shadow: 0 16px 40px rgba(194, 37, 92, 0.08);
+      padding: 50px 60px;
+    }
+
+    .resume-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+
+    .resume-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.1;
+    }
+
+    .resume-role {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      color: var(--primary);
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .resume-contact {
+      text-align: right;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .resume-contact a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .resume-section {
+      margin-bottom: 32px;
+    }
+
+    .resume-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .resume-section-title::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .experience-item, .project-item {
+      margin-bottom: 20px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .item-date {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .item-sub {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .skill-category h5 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .skill-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .badge {
+      background: #FCE7EF;
+      color: var(--primary);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+    }
+
+    .print-actions {
+      max-width: 820px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .btn-action {
+      background: var(--primary);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      border: none;
+    }
+
+    @media print {
+      body { background: #fff; padding: 0; }
+      .print-actions { display: none; }
+      .resume-wrapper { box-shadow: none; border: none; padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="print-actions">
+    <a href="index.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">← Back to Portfolio</a>
+    <button onclick="window.print()" class="btn-action">
+      <span>Print / Save as PDF</span>
+    </button>
+  </div>
+
+  <div class="resume-wrapper">
+    <header class="resume-header">
+      <div>
+        <h1 class="resume-name">Apsara Sitaula</h1>
+        <div class="resume-role">Web Designer & Graphic Designer</div>
+      </div>
+      <div class="resume-contact">
+        <div>Pokhara, Nepal</div>
+        <div><a href="mailto:apsarasitaula9@gmail.com">apsarasitaula9@gmail.com</a></div>
+        <div><a href="tel:+9779765532256">+977 9765532256</a></div>
+        <div><a href="https://github.com/apsarasitaula9-dot" target="_blank">github.com/apsarasitaula9-dot</a></div>
+        <div><a href="https://www.linkedin.com/in/apsara-sitaula-62441528b/" target="_blank">linkedin.com/in/apsara-sitaula</a></div>
+      </div>
+    </header>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Summary</h2>
+      <p>
+        Passionate Web Designer and Graphic Designer specializing in combining creative visual aesthetics with modern web technologies. Experienced in responsive website design, interactive experiences, brand identity, and marketing visuals with a focus on elegance and user impact.
+      </p>
+    </section>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Featured Projects</h2>
+      
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">Pokhara Thakali Kitchen — Restaurant UI & Development</div>
+          <div class="item-date">2024 – 2025</div>
+        </div>
+        <div class="item-sub">Web Design & Front-End Development (HTML, CSS, JavaScript, TypeScript)</div>
+        <p>
+          Designed and built a complete brand presence and responsive restaurant website featuring authentic Thakali culinary heritage, dark luxury aesthetic, reservation system, and digital menu.
+        </p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">Snake Game — Browser Edition</div>
+          <div class="item-date">2025</div>
+        </div>
+        <div class="item-sub">Game Development (HTML, CSS, JavaScript)</div>
+        <p>
+          A modern browser-based Snake Game with multiple difficulty levels, score progression, unlockable skins, sound controls, fullscreen mode, and responsive gameplay.
+        </p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">Himalaya Organic — Brand Identity & Packaging</div>
+          <div class="item-date">2025</div>
+        </div>
+        <div class="item-sub">Visual Identity (Adobe Illustrator, Photoshop, Print Production)</div>
+        <p>
+          Designed complete visual identity including logo, typography, color palette, packaging boxes, and stationery for a premium organic Himalayan skincare brand.
+        </p>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div class="item-title">Korean Ramen — Poster Series</div>
+          <div class="item-date">2025</div>
+        </div>
+        <div class="item-sub">Graphic Design & Typography (Adobe Photoshop, Illustrator)</div>
+        <p>
+          High-energy promotional food poster design utilizing dramatic warm lighting, culinary photography manipulation, and custom bilingual typography.
+        </p>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Skills & Toolkit</h2>
+      <div class="skill-grid">
+        <div class="skill-category">
+          <h5>Web & Development</h5>
+          <div class="skill-badges">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">React</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">Tailwind CSS</span>
+            <span class="badge">Git / GitHub</span>
+            <span class="badge">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h5>Design & Creative</h5>
+          <div class="skill-badges">
+            <span class="badge">Figma</span>
+            <span class="badge">Adobe Photoshop</span>
+            <span class="badge">Adobe Illustrator</span>
+            <span class="badge">Canva</span>
+            <span class="badge">CapCut</span>
+            <span class="badge">Brand Identity</span>
+            <span class="badge">Typography</span>
+            <span class="badge">UI/UX Prototyping</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="resume-section">
+      <h2 class="resume-section-title">Journey & Milestones</h2>
+      <div class="experience-item">
+        <div class="item-header">
+          <div class="item-title">Turning Ideas into Reality — Independent Designer & Developer</div>
+          <div class="item-date">2026 – Present</div>
+        </div>
+        <p>Focusing on advanced web applications, high-polish graphic branding, and building production-quality digital client solutions.</p>
+      </div>
+
+      <div class="experience-item">
+        <div class="item-header">
+          <div class="item-title">Building Skills & Projects — Creative Exploration</div>
+          <div class="item-date">2024 – 2025</div>
+        </div>
+        <p>Developed core competencies across front-end web development, game prototyping in Unity, and editorial design.</p>
+      </div>
+    </section>
+  </div>
+
+</body>
+</html>
