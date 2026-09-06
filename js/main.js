@@ -103,17 +103,17 @@ const featuredProjectsData = {
     note: 'Games That Play <span class="heart">♡</span>'
   },
   'graphic-design': {
-    id: 'korean-ramen',
+    id: 'aws-cloud-clubs',
     badge: 'GRAPHIC DESIGN',
-    title: 'Korean Ramen',
-    subtitle: 'Poster Design',
-    description: 'A bold and appetizing poster design for Korean Ramen, created to capture flavor, energy and culture.',
-    image: 'assets/projects/korean-ramen.jpg',
-    imageAlt: 'Korean Ramen Graphic Poster',
-    link: '#',
-    isExternal: false,
-    projectId: 'korean-ramen',
-    tags: ['Photoshop', 'Illustrator'],
+    title: 'AWS Cloud Clubs',
+    subtitle: 'Social Media & Graphic Design',
+    description: 'A collection of social media graphics, event posters, team features, announcements, and community promotional designs created for AWS Student Builder Group / AWS Cloud Clubs at Pokhara Engineering College.',
+    image: 'assets/projects/aws-cloud-clubs.jpg',
+    imageAlt: 'AWS Cloud Clubs Graphic Design',
+    link: 'https://www.instagram.com/awssbg.pec/',
+    isExternal: true,
+    projectId: 'aws-cloud-clubs',
+    tags: ['Graphic Design', 'Social Media', 'Photoshop', 'Illustrator'],
     num: '01',
     note: 'Visuals That Speak <span class="heart">♡</span>'
   }
@@ -299,13 +299,13 @@ const projectDatabase = {
     tags: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://apsarasitaula9-dot.github.io/snake-game/'
   },
-  'korean-ramen': {
-    title: 'Korean Ramen Poster',
-    category: 'Graphic Design • Food & Beverage Poster',
-    image: 'assets/projects/korean-ramen.jpg',
-    description: 'A bold, appetizing commercial poster design capturing the energy, flavor, and vibrant street culture of spicy Korean ramen. Created with custom visual treatment, bold Korean & English typography, and appetizing atmospheric steam & lighting.',
-    tags: ['Adobe Photoshop', 'Adobe Illustrator', 'Poster Design', 'Typography'],
-    link: '#'
+  'aws-cloud-clubs': {
+    title: 'AWS Cloud Clubs',
+    category: 'Graphic Design • Social Media & Community',
+    image: 'assets/projects/aws-cloud-clubs.jpg',
+    description: 'A collection of social media graphics, event posters, team features, announcements, and community promotional designs created for AWS Student Builder Group / AWS Cloud Clubs at Pokhara Engineering College.',
+    tags: ['Graphic Design', 'Social Media', 'Photoshop', 'Illustrator'],
+    link: 'https://www.instagram.com/awssbg.pec/'
   },
   'himalaya-organic': {
     title: 'Himalaya Organic Brand Identity',
@@ -345,6 +345,10 @@ function openProjectModal(projectId) {
   const modalOverlay = document.getElementById('projectModal');
   if (!modalOverlay) return;
 
+  if (projectId === 'aws-cloud-clubs' || projectId === 'aws-sbg') {
+    window.open('https://www.instagram.com/awssbg.pec/', '_blank', 'noopener,noreferrer');
+    return;
+  }
   if (projectId === 'pokhara-thakali') {
     window.open('https://restuarant-pokhara-ka66.vercel.app/', '_blank', 'noopener,noreferrer');
     return;
