@@ -116,12 +116,12 @@
             </div>
 
             <div class="sticky-note tilt-right" style="top: 20%; right: -20px; font-size: 1.15rem; max-width: 170px;">
-              Websites<br />Games<br />Posters<br />Branding<br />and more... <span class="heart">♡</span>
+              Websites<br />Games<br />Graphics<br />and more... <span class="heart">♡</span>
             </div>
 
             <div style="position: absolute; bottom: 20px; right: 0; text-align: right;">
-              <div style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--text-dark);">12+ Projects</div>
-              <div style="font-size: 0.78rem; color: var(--text-muted);">And more to come...</div>
+              <div style="font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--text-dark);">Featured Works</div>
+              <div style="font-size: 0.78rem; color: var(--text-muted);">Selected projects & designs</div>
             </div>
           </div>
         </div>
@@ -183,8 +183,41 @@
       <div class="container">
         <div class="projects-main-grid" id="portfolioGrid">
           
-          <!-- Card 1: Snake Game -->
-          <article class="portfolio-card" data-category="game" data-project-id="snake-game">
+          <!-- Card 1: Pokhara Thakali Kitchen (Website) -->
+          <article class="portfolio-card" data-category="website" data-project-id="pokhara-thakali" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://restuarant-pokhara-ka66.vercel.app/', '_blank', 'noopener,noreferrer')" title="Open Pokhara Thakali Kitchen live website">
+            <div class="portfolio-card-media">
+              <img src="assets/projects/pokhara-thakali-kitchen.jpg" alt="Pokhara Thakali Kitchen Website UI" loading="lazy" />
+            </div>
+            <div class="portfolio-card-body">
+              <div>
+                <span class="project-category-badge">WEBSITE</span>
+                <h4>Pokhara Thakali Kitchen</h4>
+                <div class="card-sub">Web Design & Development</div>
+                <p>
+                  A modern and elegant website for a traditional Nepali restaurant, featuring menu, gallery, reservation system and a fully responsive design.
+                </p>
+              </div>
+
+              <div>
+                <a href="https://restuarant-pokhara-ka66.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;">
+                  <span>View Project →</span>
+                </a>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">TypeScript</span>
+                </div>
+              </div>
+
+              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
+                Good Food • Good Design <span class="heart">♡</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: Snake Game (Game) -->
+          <article class="portfolio-card" data-category="game" data-project-id="snake-game" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://apsarasitaula9-dot.github.io/snake-game/', '_blank', 'noopener,noreferrer')" title="Open Snake Game live website">
             <div class="portfolio-card-media">
               <img src="assets/projects/snake-game.png" alt="Snake Game Development" loading="lazy" />
             </div>
@@ -215,7 +248,7 @@
             </div>
           </article>
 
-          <!-- Card 2: AWS Cloud Clubs (Graphic Design) -->
+          <!-- Card 3: AWS Cloud Clubs (Graphic Design) -->
           <article class="portfolio-card" data-category="graphic-design" data-project-id="aws-cloud-clubs" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://www.instagram.com/awssbg.pec/', '_blank', 'noopener,noreferrer')" title="Open AWS Cloud Clubs on Instagram">
             <div class="portfolio-card-media">
               <img src="assets/projects/aws-cloud-clubs.jpg" alt="AWS Cloud Clubs Graphic Design" loading="lazy" />
@@ -247,40 +280,8 @@
             </div>
           </article>
 
-          <!-- Card 3: Brand Identity (Graphic Design) -->
-          <article class="portfolio-card" data-category="graphic-design" data-project-id="himalaya-organic">
-            <div class="portfolio-card-media">
-              <img src="assets/projects/himalaya-branding.jpg" alt="Himalaya Organic Brand Identity" loading="lazy" />
-            </div>
-            <div class="portfolio-card-body">
-              <div>
-                <span class="project-category-badge">GRAPHIC DESIGN</span>
-                <h4>Brand Identity</h4>
-                <div class="card-sub">Himalaya Organic</div>
-                <p>
-                  Complete brand identity design including logo, packaging, and visual assets for a natural skincare brand.
-                </p>
-              </div>
-
-              <div>
-                <a href="#" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;" data-project-id="himalaya-organic">
-                  <span>View Project →</span>
-                </a>
-                <div class="project-tags">
-                  <span class="project-tag">Illustrator</span>
-                  <span class="project-tag">Photoshop</span>
-                  <span class="project-tag">Branding</span>
-                </div>
-              </div>
-
-              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
-                Clean Simple Meaningful <span class="heart">♡</span>
-              </div>
-            </div>
-          </article>
-
           <!-- Card 4: E-Library (Website) -->
-          <article class="portfolio-card" data-category="website" data-project-id="e-library">
+          <article class="portfolio-card" data-category="website" data-project-id="e-library" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://e-library-dusky.vercel.app', '_blank', 'noopener,noreferrer')" title="Open E-Library live website">
             <div class="portfolio-card-media">
               <img src="assets/projects/e-library.jpg" alt="E-Library Digital Library Project" loading="lazy" />
             </div>
@@ -307,61 +308,6 @@
 
               <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
                 Read • Learn • Grow <span class="heart">♡</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 5: Social Media Graphics (Graphic Design) -->
-          <article class="portfolio-card" data-category="graphic-design" data-project-id="social-media">
-            <div class="portfolio-card-media">
-              <img src="assets/projects/social-media.jpg" alt="Social Media Graphics Design" loading="lazy" />
-            </div>
-            <div class="portfolio-card-body">
-              <div>
-                <span class="project-category-badge">GRAPHIC DESIGN</span>
-                <h4>Social Media Graphics</h4>
-                <div class="card-sub">Various Projects</div>
-                <p>
-                  A collection of social media posts, banners and promotional designs for different brands and campaigns.
-                </p>
-              </div>
-
-              <div>
-                <a href="#" class="btn btn-primary" style="padding: 10px 22px; font-size: 0.85rem;" data-project-id="social-media">
-                  <span>View Project →</span>
-                </a>
-                <div class="project-tags">
-                  <span class="project-tag">Canva</span>
-                  <span class="project-tag">Photoshop</span>
-                  <span class="project-tag">Social Media</span>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 6: Coming Soon... (Website) -->
-          <article class="portfolio-card" data-category="website" data-project-id="coming-soon">
-            <div class="portfolio-card-media">
-              <img src="assets/projects/coming-soon.jpg" alt="Upcoming Projects" loading="lazy" />
-            </div>
-            <div class="portfolio-card-body">
-              <div>
-                <span class="project-category-badge">WEBSITE</span>
-                <h4>Coming Soon...</h4>
-                <div class="card-sub">More Exciting Projects</div>
-                <p>
-                  I'm always working on new ideas and creative projects. Stay tuned for more amazing work!
-                </p>
-              </div>
-
-              <div>
-                <a href="contact.html" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.85rem;">
-                  <span>Stay Updated →</span>
-                </a>
-              </div>
-
-              <div class="handwritten" style="position: absolute; right: 18px; bottom: 12px; font-size: 1.1rem;">
-                Bigger Ideas Coming <span class="heart">♡</span>
               </div>
             </div>
           </article>
@@ -449,6 +395,6 @@
     </div>
   </div>
 
-  <script src="js/main.js?v=3.0"></script>
+  <script src="js/main.js?v=4.0"></script>
 </body>
 </html>

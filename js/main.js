@@ -291,14 +291,6 @@ const projectDatabase = {
     tags: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://apsarasitaula9-dot.github.io/snake-game/'
   },
-  'snow-runner': {
-    title: 'Snake Game',
-    category: 'Game Development',
-    image: 'assets/projects/snake-game.png',
-    description: 'A modern browser-based Snake Game with multiple difficulty levels, score progression, unlockable skins, sound controls, fullscreen mode, and responsive gameplay.',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    link: 'https://apsarasitaula9-dot.github.io/snake-game/'
-  },
   'aws-cloud-clubs': {
     title: 'AWS Cloud Clubs',
     category: 'Graphic Design • Social Media & Community',
@@ -307,14 +299,6 @@ const projectDatabase = {
     tags: ['Graphic Design', 'Social Media', 'Photoshop', 'Illustrator'],
     link: 'https://www.instagram.com/awssbg.pec/'
   },
-  'himalaya-organic': {
-    title: 'Himalaya Organic Brand Identity',
-    category: 'Graphic Design • Branding & Packaging',
-    image: 'assets/projects/himalaya-branding.jpg',
-    description: 'Comprehensive brand identity for an organic skincare line inspired by the pristine flora of the Himalayas. Included logo crafting, color strategy (forest green & embossed gold), packaging box design, stationery, and business cards.',
-    tags: ['Brand Identity', 'Logo Design', 'Packaging', 'Print Production'],
-    link: '#'
-  },
   'e-library': {
     title: 'E-Library',
     category: 'Website • Personal Project',
@@ -322,22 +306,6 @@ const projectDatabase = {
     description: 'A modern digital library website designed to provide students with easy access to books, categories, and learning resources.',
     tags: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://e-library-dusky.vercel.app'
-  },
-  'social-media': {
-    title: 'Social Media Campaign Graphics',
-    category: 'Graphic Design • Digital Marketing',
-    image: 'assets/projects/social-media.jpg',
-    description: 'A dynamic multi-platform social media design kit created for festive and seasonal promotional campaigns. Focused on high-contrast visual hierarchy, engaging typography layouts, and platform-optimized aspect ratios.',
-    tags: ['Graphic Design', 'Social Media', 'Photoshop', 'Visual Strategy'],
-    link: '#'
-  },
-  'swiss-poster': {
-    title: 'Swiss Modernism Exhibition Poster',
-    category: 'Graphic Design • Typography & Layout',
-    image: 'assets/projects/poster-design.jpg',
-    description: 'An architectural gallery exhibition poster incorporating Swiss grid structures, metallic geometric foil accents, and minimalist spatial typography.',
-    tags: ['Typography', 'Editorial', 'Swiss Style', 'Exhibition Design'],
-    link: '#'
   }
 };
 
@@ -357,7 +325,7 @@ function openProjectModal(projectId) {
     window.open('https://e-library-dusky.vercel.app', '_blank', 'noopener,noreferrer');
     return;
   }
-  if (projectId === 'snake-game' || projectId === 'snow-runner') {
+  if (projectId === 'snake-game') {
     window.open('https://apsarasitaula9-dot.github.io/snake-game/', '_blank', 'noopener,noreferrer');
     return;
   }

@@ -9,8 +9,9 @@ Place your profile photo here!
 4. The website will automatically display your photo with gold rim lighting, organic morphing backdrop, and smooth blending.
 
 ## Project Visuals
-Your featured project previews are stored in `assets/projects/`:
+Your project previews are stored in `assets/projects/`:
 - `pokhara-thakali-kitchen.jpg` (Web Design & Development)
 - `snake-game.png` (Game Development)
-- `poster-design.jpg` (Graphic Design)
-You can replace any of these images anytime by simply replacing the files above.
+- `aws-cloud-clubs.jpg` (Graphic Design)
+- `e-library.jpg` (Web Development)
+You can replace any of these images anytime by simply updating the files above.
