@@ -143,83 +143,227 @@
     </section>
 
     <!-- ==================== FEATURED PROJECTS PREVIEW ==================== -->
-    <section class="featured-preview-section">
+    <section class="featured-preview-section" id="featured-projects">
       <div class="container">
-        <div class="section-header-compact">
-          <div class="eyebrow-tag" style="margin-bottom: 0;">FEATURED PROJECTS</div>
-          <a href="projects.html" style="font-size: 0.88rem; font-weight: 600; color: var(--primary);">
-            Explore all works →
-          </a>
+        <!-- Section Header Row -->
+        <div class="featured-header-row">
+          <div class="featured-header-left">
+            <div class="featured-eyebrow-wrap">
+              <span class="eyebrow-tag" style="margin-bottom: 0;">FEATURED PROJECTS</span>
+              <span class="eyebrow-accent-line"></span>
+            </div>
+            <h2 class="featured-main-heading">Things I've Built</h2>
+            <p class="featured-sub-desc">
+              A collection of projects that showcase my skills, creativity and passion for building useful digital experiences.
+            </p>
+          </div>
+
+          <div class="featured-header-right">
+            <a href="projects.html" class="btn-pill-outline">
+              <span>View All Projects</span>
+              <span class="pill-arrow">→</span>
+            </a>
+            <!-- Handwritten Floating Decorative Note -->
+            <div class="handwritten floating-projects-note" aria-hidden="true">
+              Ideas<br />
+              Collaborations<br />
+              Opportunities<br />
+              Always Welcome <span class="heart">♡</span>
+            </div>
+          </div>
         </div>
 
-        <div class="featured-grid-row">
+        <!-- 4-Card Horizontal Grid -->
+        <div class="featured-cards-grid">
           <!-- Card 1: Pokhara Thakali Kitchen -->
-          <article class="preview-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://restuarant-pokhara-ka66.vercel.app/', '_blank', 'noopener,noreferrer')" title="Open Pokhara Thakali Kitchen live website">
-            <div class="preview-card-img">
+          <article class="project-feature-card">
+            <div class="project-card-thumb">
               <img src="assets/projects/pokhara-thakali-kitchen.jpg" alt="Pokhara Thakali Kitchen Website" loading="lazy" />
             </div>
-            <div class="preview-card-body">
-              <div class="preview-card-info">
-                <h4>Pokhara Thakali Kitchen</h4>
-                <p>Web Design & Development</p>
+            <div class="project-card-content">
+              <h3 class="project-card-title">Pokhara Thakali Kitchen</h3>
+              <div class="project-card-cat">Web Design & Development</div>
+              <p class="project-card-desc">
+                A modern and responsive website for a traditional Thakali restaurant in Pokhara, showcasing their menu, gallery and story.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Responsive</span>
               </div>
-              <a href="https://restuarant-pokhara-ka66.vercel.app/" target="_blank" rel="noopener noreferrer" class="preview-card-arrow" aria-label="View Pokhara Thakali Kitchen live website">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+              <div class="project-card-actions">
+                <a href="https://restuarant-pokhara-ka66.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-action-live">
+                  <svg class="btn-bullet" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="12" r="3" fill="currentColor" />
+                  </svg>
+                  <span>Live Demo</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://github.com/apsarasitaula9-dot/restuarant-pokhara" target="_blank" rel="noopener noreferrer" class="btn-action-github">
+                  <span>GitHub</span>
+                  <span class="btn-arrow">↗</span>
+                </a>
+              </div>
             </div>
           </article>
 
           <!-- Card 2: Snake Game -->
-          <article class="preview-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://apsarasitaula9-dot.github.io/snake-game/', '_blank', 'noopener,noreferrer')" title="Open Snake Game live website">
-            <div class="preview-card-img">
+          <article class="project-feature-card">
+            <div class="project-card-thumb">
               <img src="assets/projects/snake-game.png" alt="Snake Game" loading="lazy" />
             </div>
-            <div class="preview-card-body">
-              <div class="preview-card-info">
-                <h4>Snake Game</h4>
-                <p>Game Development</p>
+            <div class="project-card-content">
+              <h3 class="project-card-title">Snake Game</h3>
+              <div class="project-card-cat">Game Development</div>
+              <p class="project-card-desc">
+                A classic snake game built with modern JavaScript, featuring smooth animations, score tracking and responsive controls.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-pill">HTML</span>
+                <span class="tech-pill">CSS</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">Game</span>
               </div>
-              <a href="https://apsarasitaula9-dot.github.io/snake-game/" target="_blank" rel="noopener noreferrer" class="preview-card-arrow" aria-label="View Snake Game live website">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+              <div class="project-card-actions">
+                <a href="https://apsarasitaula9-dot.github.io/snake-game/" target="_blank" rel="noopener noreferrer" class="btn-action-live">
+                  <svg class="btn-bullet" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="12" cy="12" r="9" />
+                    <circle cx="12" cy="12" r="3" fill="currentColor" />
+                  </svg>
+                  <span>Live Demo</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://github.com/apsarasitaula9-dot/snake-game" target="_blank" rel="noopener noreferrer" class="btn-action-github">
+                  <span>GitHub</span>
+                  <span class="btn-arrow">↗</span>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- Card 3: AWS Cloud Clubs -->
-          <article class="preview-card" style="cursor: pointer;" onclick="if (!event.target.closest('a')) window.open('https://www.instagram.com/awssbg.pec/', '_blank', 'noopener,noreferrer')" title="Open AWS Cloud Clubs on Instagram">
-            <div class="preview-card-img">
+          <!-- Card 3: AWS Cloud Clubs (NO GITHUB BUTTON - As specifically instructed) -->
+          <article class="project-feature-card">
+            <div class="project-card-thumb">
               <img src="assets/projects/aws-cloud-clubs.jpg" alt="AWS Cloud Clubs Graphic Design" loading="lazy" />
             </div>
-            <div class="preview-card-body">
-              <div class="preview-card-info">
-                <h4>AWS Cloud Clubs</h4>
-                <p>Graphic Design</p>
+            <div class="project-card-content">
+              <h3 class="project-card-title">AWS Cloud Clubs</h3>
+              <div class="project-card-cat">Graphic Design</div>
+              <p class="project-card-desc">
+                Posters, social media designs and branding materials for AWS Cloud Clubs, creating engaging visuals for events and campaigns.
+              </p>
+              <div class="project-tech-pills">
+                <span class="tech-pill">Photoshop</span>
+                <span class="tech-pill">Illustrator</span>
+                <span class="tech-pill">Canva</span>
+                <span class="tech-pill">Branding</span>
               </div>
-              <a href="https://www.instagram.com/awssbg.pec/" target="_blank" rel="noopener noreferrer" class="preview-card-arrow" aria-label="View AWS Cloud Clubs on Instagram">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </a>
+              <div class="project-card-actions">
+                <a href="https://www.instagram.com/awssbg.pec/" target="_blank" rel="noopener noreferrer" class="btn-action-designs">
+                  <svg class="btn-bullet" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <rect x="7" y="7" width="10" height="10" rx="1" fill="currentColor" opacity="0.35" />
+                  </svg>
+                  <span>View Designs</span>
+                  <span class="btn-arrow">→</span>
+                </a>
+              </div>
             </div>
           </article>
 
-          <!-- Card 4: View All Projects -->
-          <a href="projects.html" class="preview-card-all">
-            <div class="circle-plus-btn">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                <line x1="12" y1="5" x2="12" y2="19" />
-                <line x1="5" y1="12" x2="19" y2="12" />
-              </svg>
-            </div>
-            <div>
-              <h4>View All Projects</h4>
-              <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 4px;">Web • Games • Graphics</p>
+          <!-- Card 4: View All Projects (Dashed Border Card) -->
+          <a href="projects.html" class="all-projects-card" aria-label="View all projects">
+            <div class="all-projects-card-inner">
+              <div class="all-projects-plus-circle" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                </svg>
+              </div>
+              <h3 class="all-projects-title">View All Projects</h3>
+              <p class="all-projects-sub">More web apps, designs, experiments and ideas.</p>
+              <div class="all-projects-arrow-circle" aria-hidden="true">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </div>
             </div>
           </a>
+        </div>
+
+        <!-- Statistics Row Below Grid -->
+        <div class="featured-stats-wrap">
+          <div class="featured-stats-bar">
+            <!-- Stat 1: Projects Completed -->
+            <div class="f-stat-item">
+              <div class="f-stat-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div class="f-stat-info">
+                <div class="f-stat-num">10+</div>
+                <div class="f-stat-label">Projects Completed</div>
+              </div>
+            </div>
+
+            <!-- Stat 2: Full-Stack Applications -->
+            <div class="f-stat-item">
+              <div class="f-stat-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <div class="f-stat-info">
+                <div class="f-stat-num">3+</div>
+                <div class="f-stat-label">Full-Stack Applications</div>
+              </div>
+            </div>
+
+            <!-- Stat 3: Design Projects -->
+            <div class="f-stat-item">
+              <div class="f-stat-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" />
+                  <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" />
+                  <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />
+                  <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" />
+                  <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z" />
+                </svg>
+              </div>
+              <div class="f-stat-info">
+                <div class="f-stat-num">5+</div>
+                <div class="f-stat-label">Design Projects</div>
+              </div>
+            </div>
+
+            <!-- Stat 4: Years of Learning -->
+            <div class="f-stat-item">
+              <div class="f-stat-icon-box">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                </svg>
+              </div>
+              <div class="f-stat-info">
+                <div class="f-stat-num">1+</div>
+                <div class="f-stat-label">Years of Learning</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Right Floating Handwritten Text -->
+          <div class="handwritten floating-stats-note" aria-hidden="true">
+            Build<br />
+            Learn<br />
+            Create<br />
+            Grow <span class="heart">♡</span>
+          </div>
         </div>
       </div>
     </section>
