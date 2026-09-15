@@ -2062,6 +2062,7 @@ textarea.form-control {
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  max-width: min(480px, calc(100vw - 40px));
 }
 
 .toast-notice.show {
@@ -2071,6 +2072,37 @@ textarea.form-control {
 
 .toast-notice .toast-icon {
   color: #22C55E;
+  flex-shrink: 0;
+}
+
+.toast-notice.toast-error .toast-icon {
+  color: #EF4444;
+}
+
+.toast-notice.toast-warning .toast-icon {
+  color: #F59E0B;
+}
+
+/* Form Submit Loading Spinner */
+.spinner-icon {
+  animation: formSpinner 0.85s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes formSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.btn:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 /* ==========================================================================

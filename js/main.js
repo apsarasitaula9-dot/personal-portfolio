@@ -429,7 +429,7 @@ function initClipboardButtons() {
 }
 
 /* ==========================================================================
-   5. CONTACT FORM VALIDATION & LIVE COUNTER
+   5. CONTACT FORM VALIDATION & REAL EMAIL DISPATCH
    ========================================================================== */
 function initContactForm() {
   const contactForm = document.getElementById('contactForm');
@@ -449,32 +449,102 @@ function initContactForm() {
   }
 
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
 
-      const name = document.getElementById('contactName')?.value.trim();
-      const email = document.getElementById('contactEmail')?.value.trim();
-      const subject = document.getElementById('contactSubject')?.value;
-      const message = messageInput ? messageInput.value.trim() : '';
+      const nameInput = document.getElementById('contactName');
+      const emailInput = document.getElementById('contactEmail');
+      const subjectInput = document.getElementById('contactSubject');
+      const gotchaInput = document.getElementById('contactGotcha');
 
-      if (!name || !email || !message) {
-        showToast('Please fill out all required fields');
+      const name = nameInput?.value.trim();
+      const email = emailInput?.value.trim();
+      const subject = subjectInput?.value;
+      const message = messageInput ? messageInput.value.trim() : '';
+      const gotcha = gotchaInput ? gotchaInput.value : '';
+
+      // Field validation
+      if (!name) {
+        showToast('Please enter your name.', 'warning');
+        nameInput?.focus();
+        return;
+      }
+
+      if (!email) {
+        showToast('Please enter your email address.', 'warning');
+        emailInput?.focus();
+        return;
+      }
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showToast('Please enter a valid email address.', 'warning');
+        emailInput?.focus();
+        return;
+      }
+
+      if (!subject) {
+        showToast('Please select a subject for your inquiry.', 'warning');
+        subjectInput?.focus();
+        return;
+      }
+
+      if (!message) {
+        showToast('Please enter your message.', 'warning');
+        messageInput?.focus();
         return;
       }
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
-      submitBtn.innerHTML = `<span>Sending Message...</span>`;
-      submitBtn.disabled = true;
+      const originalBtnContent = submitBtn.innerHTML;
 
-      // Simulate sending
-      setTimeout(() => {
-        showToast(`Thank you, ${name}! Your message has been sent successfully.`);
-        contactForm.reset();
-        if (charCounter) charCounter.textContent = '0/500';
-        submitBtn.innerHTML = originalText;
+      // Loading state - prevent duplicate submissions
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span>Sending Message...</span>
+        <svg class="spinner-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="12" stroke-linecap="round" />
+        </svg>
+      `;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            subject,
+            message,
+            _gotcha: gotcha,
+          }),
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data.success) {
+          showToast(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
+          contactForm.reset();
+          if (charCounter) charCounter.textContent = '0/500';
+        } else {
+          const errorMessage =
+            data.error ||
+            'Unable to send email right now. Please try again later or email apsarasitaula9@gmail.com directly.';
+          showToast(errorMessage, 'error');
+        }
+      } catch (err) {
+        console.error('Contact form submission error:', err);
+        showToast(
+          'Network connection error. Please check your internet or reach out directly to apsarasitaula9@gmail.com.',
+          'error'
+        );
+      } finally {
+        submitBtn.innerHTML = originalBtnContent;
         submitBtn.disabled = false;
-      }, 1200);
+      }
     });
   }
 }
@@ -482,25 +552,59 @@ function initContactForm() {
 /* ==========================================================================
    6. TOAST NOTIFICATION UTILITY
    ========================================================================== */
-function showToast(message) {
+let toastTimeout = null;
+
+function showToast(message, type = 'success') {
   let toast = document.getElementById('toastNotice');
   if (!toast) {
     toast = document.createElement('div');
     toast.id = 'toastNotice';
-    toast.className = 'toast-notice';
-    toast.innerHTML = `
-      <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
-      <span class="toast-text"></span>
-    `;
     document.body.appendChild(toast);
   }
 
-  toast.querySelector('.toast-text').textContent = message;
-  toast.classList.add('show');
+  let iconSvg = '';
+  if (type === 'error') {
+    iconSvg = `
+      <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="15" y1="9" x2="9" y2="15"/>
+        <line x1="9" y1="9" x2="15" y2="15"/>
+      </svg>
+    `;
+  } else if (type === 'warning') {
+    iconSvg = `
+      <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+    `;
+  } else {
+    iconSvg = `
+      <svg class="toast-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9 12l2 2 4-4"/>
+      </svg>
+    `;
+  }
 
-  setTimeout(() => {
+  toast.className = `toast-notice toast-${type}`;
+  toast.innerHTML = `
+    ${iconSvg}
+    <span class="toast-text">${message}</span>
+  `;
+
+  requestAnimationFrame(() => {
+    toast.classList.add('show');
+  });
+
+  if (toastTimeout) {
+    clearTimeout(toastTimeout);
+  }
+
+  toastTimeout = setTimeout(() => {
     toast.classList.remove('show');
-  }, 3500);
+  }, 4500);
 }
 
 /* ==========================================================================

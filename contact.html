@@ -131,6 +131,12 @@
           </div>
 
           <form id="contactForm" novalidate>
+            <!-- Honeypot field for bot spam protection -->
+            <div style="display: none !important;" aria-hidden="true">
+              <label for="contactGotcha">Leave this field blank</label>
+              <input type="text" id="contactGotcha" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="form-group">
               <div class="input-icon-wrap">
                 <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -157,7 +163,7 @@
                   <rect x="3" y="3" width="18" height="18" rx="2" />
                   <path d="M9 12h6" />
                 </svg>
-                <select id="contactSubject" class="form-control">
+                <select id="contactSubject" class="form-control" required>
                   <option value="" disabled selected>Select Subject</option>
                   <option value="web-design">Web Design & Development</option>
                   <option value="graphic-design">Graphic Design & Branding</option>
